@@ -1,0 +1,23 @@
+<!DOCTYPE>
+<html>
+<meta charset="UTF-8" />
+
+<head>
+    <title></title>
+</head>
+
+<body></body>
+<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+<script>
+    $.ajax({
+        type: "post",
+        url: "connectmanager/user/updateFlashInfo", // 注意这里改成了相对路径
+        data: '{"appid":"tieba","cuid":"73118464C47E43476FB3E50ACD8E32C9:FG:1","connection_id":"","lcs_ip":"10.46.235.62","lcs_port":"8891","lcs_fd":"10619","device_type":"21"}',
+        async: true,
+        success: function (res) {
+            document.write(JSON.stringify(res))
+        }
+    })
+</script>
+
+</html>
